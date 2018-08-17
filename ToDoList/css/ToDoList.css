@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #CDCDCD;
+}
+form{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background: #000;
+}
+.header-label{
+    width: 100px;
+    color: white;
+    font-size: 24px;
+}
+#add{
+    width: 40%;
+    height: 30px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+section{
+    width: 60%;
+    margin: 0 auto;
+}
+h2{
+    display: flex;
+    justify-content: space-between;
+}
+ul{
+    list-style: none;
+}
+li{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-left: 5px solid #629A9C;
+    background-color: white;
+}
+.li-leftbox{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 60%;
+}
+input[type=checkbox]{
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+}
+.textarea{
+    width: 100%;
+    max-height: 300px;
+    padding: 10px;
+    margin: 0  auto;
+    border: 1px solid black;
+    overflow: auto;
+}
+pre{
+    font-family: inherit;
+}
+i{
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    background: url("../删除.png") center no-repeat;
+    cursor: pointer;
+}

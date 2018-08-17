@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ToDoList.css">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <header id="header">
+        <form ref="form" action="">
+            <label for="add" class="header-label">ToDoList</label>
+            <input type="text" ref="add" id="add" v-bind:placeholder="placeholder" v-model="text"  v-on:keyup.enter="addNewToDo" required autocomplete="off">
+        </form>
+    </header>
+
+    <section id="running" class="running">
+        <h2><span>正在进行</span><span>{{ count }}</span></h2>
+        <ul>
+            <todo-item
+                v-for="(item, index) in List"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+                v-on:remove = "List.splice(index, 1)">
+            </todo-item>
+        </ul>
+    </section>
+
+    <section id="finish" class="finish">
+        <h2><span>已经完成</span><span>{{ count }}</span></h2>
+        <ul>
+            <todo-item
+                v-for="item in List"
+                v-bind:todo="item"
+                v-bind:key="item.id"
+                v-on:remove = "List.splice(index, 1)">
+            </todo-item>
+        </ul>
+    </section>
+
+<script src="js/ToDoList.js"></script>
+</body>
+</html>
